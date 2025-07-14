@@ -66,10 +66,18 @@ export default function Login() {
               </button>
             </div>
 
-            <div className="max-w-[90%] flex bg-black items-center justify-center">
-              <p className="font-rubik font-medium text-slate-500 text-xl text-left">
-                Don't have an account?
-              </p>
+            <div className="flex items-center justify-center ">
+              <div className="w-full max-w-[90%]">
+                <p className="font-rubik font-medium text-slate-500 text-xl flex items-start">
+                  Don't have an account?
+                  <a
+                    href="/signup"
+                    className="text-sky-700 hover:text-sky-400 transition-ease-in-out duration-300"
+                  >
+                    Create a new one!
+                  </a>
+                </p>
+              </div>
             </div>
           </form>
         </div>
