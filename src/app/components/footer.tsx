@@ -7,7 +7,7 @@ import { FaFacebook } from "react-icons/fa";
 export default function Footer() {
   return (
     <>
-      <footer className="flex w-full flex-wrap align-items-center absolute mx-auto bottom-0 left-0 right-0 z-100 bg-sky-300 rounded-t-4xl pt-5 text-center">
+      <footer className="flex w-full flex-wrap align-items-center absolute mx-auto -bottom-5 left-0 right-0 z-100 bg-sky-300 rounded-t-4xl pt-5 text-center">
         <div className="flex flex-col-3 justify-between items-center w-[98%] mb-5 mx-auto">
           {/* Copyright & Class */}
           <div className="  flex flex-col text-sky-700 justify-start items-center mx-auto left-0 right-0 text-center">

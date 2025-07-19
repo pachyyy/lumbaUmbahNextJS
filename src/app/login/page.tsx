@@ -1,7 +1,17 @@
+"use client";
+
 import { GoLock } from "react-icons/go";
 import { FiUser } from "react-icons/fi";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { loginAction } from "@/app/actions/login.action";
+import { useRouter } from "next/navigation";
+import Password from "@/app/components/password";
+
+interface LoginFormData {
+  email: string;
+  password: string;
+}
 
 export default function Login() {
   return (
@@ -13,7 +23,6 @@ export default function Login() {
             <div className="flex items-center justify-center pt-2">
               <h1 className="text-6xl font-bold text-sky-700">Welcome Back!</h1>
             </div>
-
             {/* E-Mail */}
             <div className="flex bg-white mx-auto py-4 px-5 w-full max-w-[90%] gap-5 items-center rounded-full">
               <FiUser className="h-10 w-10 text-sky-700 mx-auto" />
@@ -29,23 +38,13 @@ export default function Login() {
                 required
               />
             </div>
-
             {/* Password */}
             <div className="flex bg-white mx-auto py-4 px-5 w-full max-w-[90%] gap-5 items-center rounded-full">
-              <GoLock className="h-10 w-10 text-sky-700 mx-auto" />
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
-                className="w-full rounded-lg py-4 px-3 bg-white text-black font-rubik text-2xl"
-                aria-describedby="password"
-                aria-invalid="true"
-                // onChange={handleChange}
-                required
-              />
+              <GoLock className="h-10 w-10 text-sky-700" />
+              <div className="w-full rounded-lg bg-white text-black font-rubik text-2xl">
+                <Password />
+              </div>
             </div>
-
             {/* Button */}
             <div className="flex justify-center items-center gap-5 w-full">
               <button
@@ -55,7 +54,6 @@ export default function Login() {
                 Sign In
               </button>
             </div>
-
             <div className="mx-auto flex gap-5 w-full border-4 border-slate-200 hover:border-white max-w-[90%] px-6 py-3 rounded-full text-sky-800 hover:text-sky-600 transition ease-in-out duration-300   ">
               <button
                 type="submit"
@@ -65,7 +63,6 @@ export default function Login() {
                 <FcGoogle className="w-15 h-15" />
               </button>
             </div>
-
             <div className="flex items-center justify-center ">
               <div className="w-full max-w-[90%]">
                 <p className="font-rubik font-medium text-slate-500 text-xl flex items-start">
