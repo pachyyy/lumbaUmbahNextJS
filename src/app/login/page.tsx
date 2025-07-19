@@ -17,7 +17,7 @@ export default function Login() {
   return (
     <>
       <div className="flex items-center justify-center h-screen w-full py-35 px-4">
-        <div className="bg-sky-200 rounded-4xl w-full h-full mx-auto max-w-[45%] flex flex-col">
+        <div className="bg-sky-100 rounded-4xl w-full h-full mx-auto max-w-[45%] flex flex-col">
           <form action={loginAction} className="grid grid-rows-3 gap-5">
             {/* Title */}
             <div className="flex items-center justify-center pt-2">
@@ -54,7 +54,7 @@ export default function Login() {
                 Sign In
               </button>
             </div>
-            <div className="mx-auto flex gap-5 w-full border-4 border-slate-200 hover:border-white max-w-[90%] px-6 py-3 rounded-full text-sky-800 hover:text-sky-600 transition ease-in-out duration-300   ">
+            <div className="mx-auto flex gap-5 w-full border-4 border-slate-50 hover:border-slate-300 max-w-[90%] px-6 py-3 rounded-full text-sky-800 hover:text-sky-600 transition ease-in-out duration-300   ">
               <button
                 type="submit"
                 className="font-medium text-4xl font-rubik w-full items-center cursor-pointer flex justify-center gap-15"
