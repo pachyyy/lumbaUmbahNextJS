@@ -1,4 +1,4 @@
-import MainNav from "@/app/components/mainNav";
+import MainNav from "@/src/app/components/mainNav";
 
 export default function Check() {
   return (
