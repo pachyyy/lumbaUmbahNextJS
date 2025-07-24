@@ -2,16 +2,10 @@
 
 import { GoLock } from "react-icons/go";
 import { FiUser } from "react-icons/fi";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { loginAction } from "@/app/actions/login.action";
+import { loginAction } from "@/src/app/actions/login.action.ts";
 import { useRouter } from "next/navigation";
-import Password from "@/app/components/password";
-
-interface LoginFormData {
-  email: string;
-  password: string;
-}
+import Password from "@/src/app/components/password";
 
 export default function Login() {
   return (

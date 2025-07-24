@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoNavy from "@/app/asset/logo/logo-navy.png";
+import logoNavy from "@/src/app/asset/logo/logo-navy.png";
 
 export default function NotFound() {
   return (

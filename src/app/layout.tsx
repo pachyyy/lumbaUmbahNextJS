@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Rubik, Plus_Jakarta_Sans } from "next/font/google";
-import MainNav from "@/app/components/mainNav";
-import Footer from "@/app/components/footer";
+import MainNav from "@/src/app/components/mainNav";
+import Footer from "@/src/app/components/footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -37,10 +37,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} antialiased min-h-screen`}
       >
         <MainNav />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>

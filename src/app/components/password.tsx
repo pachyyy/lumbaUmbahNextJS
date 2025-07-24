@@ -17,9 +17,9 @@ export default function Password({
   const [showPassword, setShowPassword] = useState(false);
   const type = showPassword ? "text" : "password";
   const icon = showPassword ? (
-    <FaEyeSlash className="w-7 h-7" />
+    <FaEyeSlash className="lg:w-7 lg:h-7 h-4 w-4" />
   ) : (
-    <FaEye className="w-7 h-7" />
+    <FaEye className="lg:w-7 lg:h-7 h-4 w-4" />
   );
 
   function handleToggle() {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hero from "@/app/asset/washing-machine.svg";
+import hero from "@/src/app/asset/washing-machine.svg";
 
 export default function Home() {
   return (

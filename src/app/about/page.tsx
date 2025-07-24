@@ -1,14 +1,14 @@
 import Image from "next/image";
-import sofa from "@/app/asset/sofa.svg";
-import time from "@/app/asset/time.svg";
-import shirt from "@/app/asset/shirt.svg";
+import sofa from "@/src/app/asset/sofa.svg";
+import time from "@/src/app/asset/time.svg";
+import shirt from "@/src/app/asset/shirt.svg";
 
 export default function About() {
   return (
     <>
       <div className="h-full w-full">
         <div className="flex flex-col gap-25 justify-center items-center h-screen">
-          <div className="fixed top-30">
+          <div className="top-30">
             <h1 className="mx-auto font-rubik text-5xl font-bold text-sky-700">
               About Us
             </h1>
