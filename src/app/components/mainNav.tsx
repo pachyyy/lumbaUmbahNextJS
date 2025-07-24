@@ -47,7 +47,7 @@ export default function MainNav() {
       </button>
 
       {/* Desktop Navigation - Hidden on mobile */}
-      <nav className="hidden md:flex items-center justify-between px-10 py-3 fixed top-0 left-0 right-0 z-50 font-rubik bg-white shadow-sm">
+      <nav className="hidden md:flex items-center justify-between px-10 py-3 sticky top-0 left-0 right-0 z-50 font-rubik bg-white shadow-sm">
         <div>
           <a href="/">
             <Image src={logoNavy} alt="logo" className="w-20 cursor-pointer" />

@@ -4,7 +4,8 @@ import hero from "@/src/app/asset/washing-machine.svg";
 export default function Home() {
   return (
     <>
-      <div className="grid grid-cols-2 h-screen px-10">
+      <div className="grid grid-cols-2 px-10 min-h-screen">
+        {/* Title */}
         <div className="flex flex-col justify-center h-full gap-5 px-8">
           <p className="text-7xl font-rubik font-light text-sky-900">
             "BIAR KAMI
@@ -14,8 +15,8 @@ export default function Home() {
             UMBAH"
           </p>
 
-          {/* small font */}
-          <div>
+          {/* Description */}
+          <div className="">
             <p className="text-xl font-rubik font-regular text-sky-900">
               <span className="font-bold italic">Lumba-umbah</span> provides a
               variety of services you need
@@ -43,7 +44,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center h-full">
+        <div className="hidden md:flex flex-col items-center justify-center h-full">
           <div>
             <Image src={hero} alt="hero" className="w-150" />
           </div>

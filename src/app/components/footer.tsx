@@ -7,11 +7,11 @@ import { FaFacebook } from "react-icons/fa";
 export default function Footer() {
   return (
     <>
-      <footer className="flex w-full flex-wrap align-items-center mx-auto bottom-0 left-0 right-0 z-10 bg-sky-300 rounded-t-4xl pt-5 text-center">
+      <footer className="flex w-full flex-wrap align-items-center bg-sky-300 rounded-t-4xl pt-5 text-center">
         <div className="flex flex-col-3 justify-between items-center w-[98%] mb-5 mx-auto md:flex-row">
           {/* Copyright & Class */}
           <div className="flex flex-col text-sky-700 justify-start items-center mx-auto left-0 right-0 text-center text-xs lg:text-xl">
-            <p>
+            <p className="font-rubik">
               &copy; {new Date().getFullYear()} <b>LUMBA-UMBAH</b>
             </p>
             <p>TI 2023 C - Kelompok 5</p>

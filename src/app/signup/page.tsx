@@ -10,6 +10,11 @@ export default function Signup() {
   const [passwordMessage, setPasswordMessage] = useState(".");
   const [passwordMessageClass, setPasswordMessageClass] = useState("");
 
+  // Email validation states
+  const [email, setEmail] = useState("");
+  const [emailMessage, setEmailMessage] = useState(".");
+  const [emailMessageClass, setEmailMessageClass] = useState("");
+
   const handlePasswordChange = (e) => {
     const newPassword = e.target.value;
     setPassword(newPassword);
@@ -33,7 +38,7 @@ export default function Signup() {
     if (pass !== repeatPass) {
       setPasswordMessage("Passwords do not match");
       setPasswordMessageClass(
-        "font-rubik px-3 italic text-red-500 bg-sky-100 text-xs md:text-2xs"
+        "font-rubik px-3 italic text-red-500 text-xs md:text-2xs"
       );
     } else {
       setPasswordMessage("Passwords match");
@@ -43,9 +48,39 @@ export default function Signup() {
     }
   };
 
+  // Email validation function
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleEmailChange = (e) => {
+    const newEmail = e.target.value;
+    setEmail(newEmail);
+
+    // Don't show message if field is empty
+    if (!newEmail) {
+      setEmailMessage(".");
+      setEmailMessageClass("");
+      return;
+    }
+
+    if (!validateEmail(newEmail)) {
+      setEmailMessage("Please enter a valid email address");
+      setEmailMessageClass(
+        "font-rubik px-3 py-2 italic text-red-500 text-xs md:text-2xs"
+      );
+    } else {
+      setEmailMessage("Valid email format");
+      setEmailMessageClass(
+        "font-rubik px-3 py-2 italic text-gr  een-500 text-xs md:text-2xs"
+      );
+    }
+  };
+
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen w-full py-8 md:py-20 lg:py-35 px-4">
+      <div className="flex items-center justify-center w-full py-4 px-3 md:py-5 lg:px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-4 max-w-[95%] lg:max-w-[90%] w-full h-full mx-auto justify-center">
           {/* Left Section */}
           <div className="flex gap-3 md:gap-5 flex-col order-1 lg:order-1">
@@ -108,9 +143,14 @@ export default function Signup() {
                 </p>
                 <input
                   type="email"
+                  value={email}
+                  onChange={handleEmailChange}
                   className="w-full rounded-lg py-2 md:py-2.5 lg:py-3 px-2 bg-white text-black font-rubik text-base md:text-lg lg:text-xl"
                   required
                 />
+                <p id="email-check" className={emailMessageClass}>
+                  {emailMessage}
+                </p>
               </div>
 
               {/* Phone Number */}
@@ -187,6 +227,18 @@ export default function Signup() {
                   </span>
                   <FcGoogle className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 " />
                 </button>
+              </div>
+
+              <div className="flex items-center justify-center md:justify-start ">
+                <p className="text-center text-xs md:text-xl text-gray-500 font-rubik">
+                  Already have an account?
+                  <a
+                    href="/login"
+                    className="font-rubik text-sky-700 hover:text-sky-400 transition-ease-in-out duration-300 font-medium"
+                  >
+                    Sign in here!
+                  </a>
+                </p>
               </div>
             </form>
           </div>

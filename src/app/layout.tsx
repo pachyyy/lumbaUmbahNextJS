@@ -37,10 +37,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} antialiased min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${jakarta.variable} antialiased h-screen w-full`}
       >
         <MainNav />
-        <main className="flex-grow">{children}</main>
+        <main className="">{children}</main>
         <Footer />
       </body>
     </html>
