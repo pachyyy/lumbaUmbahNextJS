@@ -3,7 +3,7 @@
 import { GoLock } from "react-icons/go";
 import { FiUser } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
-import { loginAction } from "@/src/app/actions/login.action.ts";
+import { loginAction } from "@/src/app/actions/login.action";
 import { useRouter } from "next/navigation";
 import Password from "@/src/app/components/password";
 
