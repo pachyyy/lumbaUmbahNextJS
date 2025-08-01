@@ -73,7 +73,7 @@ export default function Signup() {
     } else {
       setEmailMessage("Valid email format");
       setEmailMessageClass(
-        "font-rubik px-3 py-2 italic text-gr  een-500 text-xs md:text-2xs"
+        "font-rubik px-3 py-2 italic text-green-500 text-xs md:text-2xs"
       );
     }
   };

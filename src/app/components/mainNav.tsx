@@ -16,7 +16,7 @@ export default function MainNav() {
       {/* Mobile Menu Button - Only visible on mobile */}
       <button
         onClick={toggleMobileMenu}
-        className="md:hidden sticky top-4 left-4 z-50 bg-sky-700 text-white p-3 rounded-lg hover:bg-sky-500 transition ease-in-out duration-300"
+        className="md:hidden sticky  top-4 left-4 z-50 bg-sky-700 text-white p-3 rounded-lg hover:bg-sky-500 transition ease-in-out duration-300"
         aria-label="Toggle mobile menu"
       >
         <svg
